@@ -60,12 +60,12 @@ link = {
                             '/iGYzT/plcyz-f8A-158x110.jpg"')
         },
         'enabled': {
-            'type': 'boolean',
+            'type': ['null','boolean'],
             'description': ('Designates whether this PromotedLink will be '
                             'served.')
         },
         'archived': {
-            'type': 'boolean',
+            'type': ['null','boolean'],
             'description': ('Designates whether this PromotedLink is '
                             'archived.')
         },
@@ -95,7 +95,7 @@ campaign = {
             'description': 'Campaign name'
         },
         'campaignOnAir': {
-            'type': 'boolean',
+            'type': ['null','boolean'],
             'description': ('Is the campaign on air, same as campaignOnAir '
                             'in Live Status')
         },
@@ -105,7 +105,7 @@ campaign = {
                             'as onAirReason in Live Status')
         },
         'enabled': {
-            'type': 'boolean',
+            'type': ['null','boolean'],
             'description': 'Is the campaign enabled'
         },
         'budget': {
@@ -124,7 +124,7 @@ campaign = {
                                     '"First quarter budget"'),
                 },
                 'shared': {
-                    'type': 'boolean',
+                    'type': ['null','boolean'],
                     'description': ('Whether the Budget is shared between '
                                     'Campaigns, provided for convenience '
                                     'based on the number of Campaigns '
@@ -176,7 +176,7 @@ campaign = {
                                     'this will not be used. i.e. "2014-01-17"')
                 },
                 'runForever': {
-                    'type': 'boolean',
+                    'type': ['null','boolean'],
                     'description': ('Designates whether the budged has an end '
                                     'date In case of true, "endDate" '
                                     'attribute will not be part of the '
