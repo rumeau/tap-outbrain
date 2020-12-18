@@ -94,6 +94,10 @@ campaign = {
             'type': 'string',
             'description': 'Campaign name'
         },
+        'enabled': {
+            'type': 'boolean',
+            'description': 'Is the campaign enabled'
+        },
         'marketerId': {
             'type': 'string',
             'description': 'Marketer ID'
@@ -103,53 +107,54 @@ campaign = {
             'type': ['null', 'string'],
             'description': 'On Air Reason'
         },
-
-        'enabled': {
-            'type': ['null','boolean'],
-            'description': 'Is the campaign enabled'
+        'creationTime': {
+            'type': 'string',
+            'format': 'date-time',
+            'description': ('The time when the CreationTime was created, '
+                            'i.e. "2013-01-14T07:19:16Z"')
         },
-
-        'currency': {
-            'type': ['null', 'string'],
-            'description': 'Currency'
+        'lastModified': {
+            'type': 'string',
+            'format': 'date-time',
+            'description': ('The time when the LastModified was created, '
+                            'i.e. "2013-01-14T07:19:16Z"')
         },
-
         'cpc': {
             'type': ['null', 'number'],
             'description': ('Cost per monetized user action (for example '
                 'cost per click). See Currencies for valid '
                 'cost values')
         },
-
+        'autoArchived': {
+            'type': 'boolean'
+        },
         'minimumCpc': {
             'type': ['null', 'number'],
             'description': ('Minimum Cost per monetized user action (for example '
                 'cost per click). See Currencies for valid '
                 'cost values')
         },
-
-        'amountSpent': {
-            'type': ['null', 'number'],
-            'description': 'Amount spent'
+        'currency': {
+            'type': ['null', 'string'],
+            'description': 'Currency'
         },
-
         'budget': {
             'type': 'object',
             'description': ('Partial Budget entity of a campaign. For full '
                             'details use Budget'),
             'properties': {
                 'id': {
-                    'type': ['null', 'string'],
+                    'type': 'string',
                     'description': ('The id of this Budget, i.e. '
                                     '"00f4b02153ee75f3c9dc4fc128ab041962"')
                 },
                 'name': {
-                    'type': ['null', 'string'],
+                    'type': 'string',
                     'description': ('The name of this Budget, i.e. '
                                     '"First quarter budget"'),
                 },
                 'shared': {
-                    'type': ['null','boolean'],
+                    'type': 'boolean',
                     'description': ('Whether the Budget is shared between '
                                     'Campaigns, provided for convenience '
                                     'based on the number of Campaigns '
@@ -164,16 +169,6 @@ campaign = {
                     'type': ['null', 'string'],
                     'description': ('The currency denomination applied to the '
                                     'budget amount, i.e. "USD"')
-                },
-                'amountRemaining': {
-                    'type': ['null', 'number'],
-                    'description': ('The unspent monetary amount remaining on '
-                                    'this Budget, i.e. 150.00')
-                },
-                'amountSpent': {
-                    'type': ['null', 'number'],
-                    'description': ('The spent monetary amount of this '
-                                    'Budget, i.e. 1850.00')
                 },
                 'creationTime': {
                     'type': ['null', 'string'],
@@ -201,7 +196,7 @@ campaign = {
                                     'this will not be used. i.e. "2014-01-17"')
                 },
                 'runForever': {
-                    'type': ['null','boolean'],
+                    'type': 'boolean',
                     'description': ('Designates whether the budged has an end '
                                     'date In case of true, "endDate" '
                                     'attribute will not be part of the '
@@ -216,17 +211,6 @@ campaign = {
                     'type': ['null', 'string'],
                     'description': ('Controls how fast the Budget will be '
                                     'spent, i.e. "AUTOMATIC"')
-                },
-                'dailyTarget': {
-                    'type': ['null', 'number'],
-                    'description': ('The maximum amount of spend that is '
-                                    'allowed per day. Relevant for '
-                                    'DAILY_TARGET pacing. i.e. 100.00')
-                },
-                'maximumAmount': {
-                    'type': ['null', 'number'],
-                    'description': ('The maximum amount allowed if defined, '
-                                    'i.e. 100.00')
                 }
             }
         },
