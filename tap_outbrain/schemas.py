@@ -115,21 +115,21 @@ campaign = {
         },
 
         'cpc': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('Cost per monetized user action (for example '
                 'cost per click). See Currencies for valid '
                 'cost values')
         },
 
         'minimumCpc': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('Minimum Cost per monetized user action (for example '
                 'cost per click). See Currencies for valid '
                 'cost values')
         },
 
         'amountSpent': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': 'Amount spent'
         },
 
