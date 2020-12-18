@@ -20,7 +20,7 @@ link = {
                             'planes a home"'),
         },
         'lastModified': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'format': 'date-time',
             'description': ('The time when the PromotedLink was last '
                             'modified, i.e. "2013-03-16T10:32:31Z"')
@@ -38,22 +38,22 @@ link = {
                             '/2014/02/11/nasa-google-hangar-one/"')
         },
         'siteName': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'description': ('The name of the publisher the PromotedLink '
                             'URL points to, i.e. "cnn.com"')
         },
         'sectionName': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'description': ('The section name of the site the PromotedLink '
                             'URL points to, i.e. "Sports"')
         },
         'status': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'description': ('The review status of the PromotedLink, '
                             'i.e. "PENDING"')
         },
         'cachedImageUrl': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'description': ('The URL of the PromotedLink\'s image, cached '
                             'on Outbrain\'s servers, i.e. "http://images'
                             '.outbrain.com/imageserver/v2/s/gtE/n/plcyz/abc'
@@ -70,13 +70,13 @@ link = {
                             'archived.')
         },
         'documentLanguage': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'description': ('The 2-letter code for the language of this '
                             'PromotedLink (via the PromotedLinks URL), '
                             'i.e. "EN"')
         },
         'cpc': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('Cost per click, i.e. 0.58')
         }
     }
@@ -91,7 +91,7 @@ campaign = {
             'description': 'Campaign ID'
         },
         'name': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'description': 'Campaign name'
         },
         'campaignOnAir': {
@@ -114,12 +114,12 @@ campaign = {
                             'details use Budget'),
             'properties': {
                 'id': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'description': ('The id of this Budget, i.e. '
                                     '"00f4b02153ee75f3c9dc4fc128ab041962"')
                 },
                 'name': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'description': ('The name of this Budget, i.e. '
                                     '"First quarter budget"'),
                 },
@@ -131,45 +131,45 @@ campaign = {
                                     'associated to this Budget, i.e. true')
                 },
                 'amount': {
-                    'type': 'number',
+                    'type': ['null', 'number'],
                     'description': ('The monetary amount of this Budget, '
                                     'i.e. 2000.00')
                 },
                 'currency': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'description': ('The currency denomination applied to the '
                                     'budget amount, i.e. "USD"')
                 },
                 'amountRemaining': {
-                    'type': 'number',
+                    'type': ['null', 'number'],
                     'description': ('The unspent monetary amount remaining on '
                                     'this Budget, i.e. 150.00')
                 },
                 'amountSpent': {
-                    'type': 'number',
+                    'type': ['null', 'number'],
                     'description': ('The spent monetary amount of this '
                                     'Budget, i.e. 1850.00')
                 },
                 'creationTime': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'format': 'date-time',
                     'description': ('The time when this Budget was created, '
                                     'i.e. "2013-01-14 07:19:16"')
                 },
                 'lastModified': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'format': 'date-time',
                     'description': ('The last modification date of this '
                                     'Budget, i.e. "2014-01-15 12:24:01"')
                 },
                 'startDate': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'format': 'date',
                     'description': ('The date this Budget is scheduled to '
                                     'begin spending, i.e. "2014-01-15"')
                 },
                 'endDate': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'format': 'date',
                     'description': ('The date this Budget is scheduled to '
                                     'stop spending. If runForever is true '
@@ -183,30 +183,30 @@ campaign = {
                                     'Budgets attributes. i.e. true')
                 },
                 'type': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'description': ('Controls on which period the Budget '
                                     'refreshes, i.e. "MONTHLY"')
                 },
                 'pacing': {
-                    'type': 'string',
+                    'type': ['null', 'string'],
                     'description': ('Controls how fast the Budget will be '
                                     'spent, i.e. "AUTOMATIC"')
                 },
                 'dailyTarget': {
-                    'type': 'number',
+                    'type': ['null', 'number'],
                     'description': ('The maximum amount of spend that is '
                                     'allowed per day. Relevant for '
                                     'DAILY_TARGET pacing. i.e. 100.00')
                 },
                 'maximumAmount': {
-                    'type': 'number',
+                    'type': ['null', 'number'],
                     'description': ('The maximum amount allowed if defined, '
                                     'i.e. 100.00')
                 }
             }
         },
         'cpc': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('Cost per monetized user action (for example '
                             'cost per click). See Currencies for valid '
                             'cost values')
@@ -224,50 +224,50 @@ campaign_performance = {
                             'for this record.')
         },
         'fromDate': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'format': 'date',
             'description': 'The start date for this record.'
         },
         'impressions': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('Total number of PromotedLinks impressions across '
                             'the entire query range.'),
         },
         'clicks': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('Total PromotedLinks clicks across the entire '
                             'query range.'),
         },
         'ctr': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The average CTR (Click Through Rate) percentage '
                             'across the entire query range (clicks / '
                             'impressions)/100.'),
         },
         'spend': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The total amount of money spent across the '
                             'entire query range.'),
         },
         'ecpc': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The effective (calculated) average CPC (Cost Per '
                             'Click) across the entire query range. '
                             'Calculated as: (spend / clicks)'),
         },
         'conversions': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The total number of conversions calculated '
                             'across the entire query range.')
         },
         'conversionRate': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The average rate of conversions per click '
                             'percentage across the entire query range. '
                             'Calculated as: (conversions / clicks)/100')
         },
         'cpa': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The average CPA (Cost Per Acquisition) '
                             'calculated across the entire query range. '
                             'Calculated as: (spend / conversions)')
@@ -283,54 +283,54 @@ link_performance = {
             'description': ('The campaign ID for this record.')
         },
         'linkId': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'description': ('The link ID for this record.')
         },
         'fromDate': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'format': 'date',
             'description': 'The start date for this record.'
         },
         'impressions': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('Total number of PromotedLinks impressions across '
                             'the entire query range.'),
         },
         'clicks': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('Total PromotedLinks clicks across the entire '
                             'query range.'),
         },
         'ctr': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The average CTR (Click Through Rate) percentage '
                             'across the entire query range (clicks / '
                             'impressions)/100.'),
         },
         'spend': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The total amount of money spent across the '
                             'entire query range.'),
         },
         'ecpc': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The effective (calculated) average CPC (Cost Per '
                             'Click) across the entire query range. '
                             'Calculated as: (spend / clicks)'),
         },
         'conversions': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The total number of conversions calculated '
                             'across the entire query range.')
         },
         'conversionRate': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The average rate of conversions per click '
                             'percentage across the entire query range. '
                             'Calculated as: (conversions / clicks)/100')
         },
         'cpa': {
-            'type': 'number',
+            'type': ['null', 'number'],
             'description': ('The average CPA (Cost Per Acquisition) '
                             'calculated across the entire query range. '
                             'Calculated as: (spend / conversions)')
