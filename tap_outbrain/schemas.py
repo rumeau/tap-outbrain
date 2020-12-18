@@ -91,23 +91,48 @@ campaign = {
             'description': 'Campaign ID'
         },
         'name': {
-            'type': ['null', 'string'],
+            'type': 'string',
             'description': 'Campaign name'
         },
-        'campaignOnAir': {
-            'type': ['null','boolean'],
-            'description': ('Is the campaign on air, same as campaignOnAir '
-                            'in Live Status')
+        'marketerId': {
+            'type': 'string',
+            'description': 'Marketer ID'
         },
+
         'onAirReason': {
             'type': ['null', 'string'],
-            'description': ('The reason for the campaign on air status, same '
-                            'as onAirReason in Live Status')
+            'description': 'On Air Reason'
         },
+
         'enabled': {
             'type': ['null','boolean'],
             'description': 'Is the campaign enabled'
         },
+
+        'currency': {
+            'type': ['null', 'string'],
+            'description': 'Currency'
+        },
+
+        'cpc': {
+            'type': 'number',
+            'description': ('Cost per monetized user action (for example '
+                'cost per click). See Currencies for valid '
+                'cost values')
+        },
+
+        'minimumCpc': {
+            'type': 'number',
+            'description': ('Minimum Cost per monetized user action (for example '
+                'cost per click). See Currencies for valid '
+                'cost values')
+        },
+
+        'amountSpent': {
+            'type': 'number',
+            'description': 'Amount spent'
+        },
+
         'budget': {
             'type': 'object',
             'description': ('Partial Budget entity of a campaign. For full '
@@ -205,11 +230,22 @@ campaign = {
                 }
             }
         },
-        'cpc': {
-            'type': ['null', 'number'],
-            'description': ('Cost per monetized user action (for example '
-                            'cost per click). See Currencies for valid '
-                            'cost values')
+
+        'liveStatus': {
+            'campaignOnAir': {
+                'type': 'boolean',
+                'description': ('Is the campaign on air, same as campaignOnAir '
+                    'in Live Status')
+            },
+            'onAirReason': {
+                'type': ['null', 'string'],
+                'description': ('The reason for the campaign on air status, same '
+                    'as onAirReason in Live Status')
+            },
+            'amountSpent': {
+                'type': 'number',
+                'description': ('Amount spent')
+            }
         }
     }
 }
