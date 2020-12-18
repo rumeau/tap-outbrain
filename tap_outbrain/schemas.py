@@ -100,7 +100,7 @@ campaign = {
                             'in Live Status')
         },
         'onAirReason': {
-            'type': 'string',
+            'type': ['null', 'string'],
             'description': ('The reason for the campaign on air status, same '
                             'as onAirReason in Live Status')
         },
